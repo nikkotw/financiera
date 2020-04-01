@@ -1,20 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-app>
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-row>
+        <ion-title>¡Bienvenidos!</ion-title>
+
+      </ion-row>
+
     </ion-toolbar>
+    <header>
+      <ion-img id="logo" src="../assets/img/logo-credipago.png"></ion-img>
+    </header>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <ion-content class="ion-padding">
+
+    <ion-item class="botones" lines="none"><button id="btn-ingresar" (click)="testing()"> SOLICITAR PRESTAMO </button>
+    </ion-item>
+    <ion-item class="botones" lines="none"><button id="btn-ingresar" (click)="testing()"> PAGAR MI CUOTA </button>
+    </ion-item>
+    <ion-item class="botones" lines="none"><button id="btn-ingresar" (click)="testing()"> OTRAS GESTIONES </button>
+    </ion-item>
+
+  </ion-content>
+  <ion-img id="chica" src="../assets/img/chica-+-billetes.png"></ion-img>
+  <ion-footer>
+    <ion-text id="texto">
+      Nuestra aplicacion permite que puedas<br> 
+      hacer la consulta desde cualquier sitio,<br>
+      ingresas los datos y una persona de <br>
+      nuestro equipo se pone en contacto.
+    </ion-text>
+    <button id="btn-footer"> WWW.CREDIPAGO.COM.AR </button>
+
+
+  </ion-footer>
+</ion-app>

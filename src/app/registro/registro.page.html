@@ -1,0 +1,65 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-row>
+        <ion-title>Registro de Datos</ion-title>
+
+      </ion-row>
+
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-grid fixed>
+      <ng-container *ngIf="!captcha">
+        <ion-item lines="none">
+          <ion-label position="stacked">Nombre y Apellido</ion-label><br>
+          <ion-input type="text" [(ngModel)]="nombreAp"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">DNI</ion-label>
+          <ion-input [(ngModel)]="DNI">
+          </ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">E-Mail</ion-label>
+          <ion-input [(ngModel)]="email">
+          </ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">Telefono Celular</ion-label>
+          <ion-input [(ngModel)]="celular" placeholder="Ej:02804">
+          </ion-input>
+        </ion-item>
+        <ion-row>
+          <button id="submit" (click)="phoneAuth()">Enviar</button>
+
+        </ion-row>
+      </ng-container>
+      
+        <ng-container>
+          <div id="recaptcha-container"></div>
+        </ng-container>
+        <ng-container *ngIf="codigo">
+            
+                <ion-item lines="none">
+                  <ion-label position="stacked">Codigo Verificacion</ion-label>
+                  <ion-input [(ngModel)]="codigoVerificador" placeholder="">
+                  </ion-input>
+                </ion-item>
+          
+              <ion-item lines="none">
+
+                <button id="verifica" (click)="singInWhitCode()">Verificar</button>
+
+              </ion-item>
+              
+          
+        </ng-container>
+    </ion-grid>
+
+  </ion-content>
+  <ion-footer fixed>
+
+  </ion-footer>
+
+</ion-app>
