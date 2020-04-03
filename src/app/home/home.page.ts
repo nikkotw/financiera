@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 //import { FirebaseAuthentication } from '@ionic-native/firebase-authentication/ngx';
-import { NavController } from '@ionic/angular';
+//import { NavController } from '@ionic/angular';
 import * as firebase from 'firebase';
 import { Router } from '@angular/router';
+
 //import {AngularFireModule } from '@angular/fire'
 
 
@@ -15,37 +16,28 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
   applicationVerifier;
- constructor(private navCtrl:NavController,) {
-    
-    firebase.auth().useDeviceLanguage();
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        console.log(user);
-      } else {
-        
-        console.log("tamo Jodido");
-      }
-    });
-    
-   /* this.firebaseAuthentication.onAuthStateChanged().subscribe((user)=>{
-      if(user){
-        alert("usuario Autenticado");
-      }
-      else{
-        console.log("no Autenticado")
-      }
-    });*/
 
-    
-    //this.router.navigate(['/registro']);
- 
- 
- 
+ constructor(private router :Router) {
+
+    firebase.auth().useDeviceLanguage();
+
+     
   } 
   ionViewDidLoad() {
     
   }
-
+opcion(option){
+  let pass = option;
+  firebase.auth().onAuthStateChanged(user=> {
+    if (user) {
+       //this.navCtrl.navigateForward("/registro/"+${option}); 
+      this.router.navigate(['/registro',  pass]);
+    } else {
+      //this.navCtrl.navigateForward(['/sms',option]); 
+      this.router.navigate(['/sms',  pass]);
+    }
+  });
+}
 }
 
 

@@ -37,6 +37,8 @@
     "cordova-support-google-services": "1.4.0",
     "core-js": "^2.5.4",
     "firebase": "^7.12.0",
+    "flag-icon-css": "^3.4.6",
+    "ngx-international-phone-number": "^1.0.6",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
