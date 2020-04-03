@@ -2,7 +2,10 @@
   <ion-header>
     <ion-toolbar>
       <ion-row>
-        <ion-title>Registro de Datos</ion-title>
+        <div id="arrow">
+          <ion-icon name="arrow-back" (click)="returnBack()"></ion-icon>
+        </div>
+        <ion-title>{{titulo}}</ion-title>
 
       </ion-row>
 
@@ -31,7 +34,7 @@
           </ion-input>
         </ion-item>
         <ion-row>
-          <button id="submit" (click)="phoneAuth()">Enviar</button>
+          <button id="submit" (click)="enviaDatos()">Enviar</button>
 
         </ion-row>
       </ng-container>
@@ -58,7 +61,15 @@
     </ion-grid>
 
   </ion-content>
-  <ion-footer fixed>
+  <ion-footer>
+    <ion-text id="texto">
+      Nuestra aplicacion permite que puedas<br> 
+      hacer la consulta desde cualquier sitio,<br>
+      ingresas los datos y una persona de <br>
+      nuestro equipo se pone en contacto.
+    </ion-text>
+    <button id="btn-footer"> WWW.CREDIPAGO.COM.AR </button>
+
 
   </ion-footer>
 

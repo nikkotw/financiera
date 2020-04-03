@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "941620020857",
+    "firebase_url": "https://credipago-ba353.firebaseio.com",
+    "project_id": "credipago-ba353",
+    "storage_bucket": "credipago-ba353.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941620020857:android:549d6023c1c6c7ba9eb6a8",
+        "android_client_info": {
+          "package_name": "com.nikkotw.credipago"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941620020857-54rnh0j4gfuurrn7dke79ma8j0b80cjk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nikkotw.credipago",
+            "certificate_hash": "838647ea9db002cab4af4525c125289eddbbdd90"
+          }
+        },
+        {
+          "client_id": "941620020857-ch1c5u0qcg6gfk9ipmhaha1pvr2li0n7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9Rzd3_HcXsHX-gA1QAvQ_Uyi2pYD0nak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941620020857-ch1c5u0qcg6gfk9ipmhaha1pvr2li0n7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

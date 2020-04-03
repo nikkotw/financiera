@@ -1,0 +1,75 @@
+
+<div class="body">
+  <div id="arrow">
+    <ion-icon name="arrow-back" (click)="returnBack()"></ion-icon>
+  </div>
+
+
+
+
+  <div class="contenedor" *ngIf="!valida  ">
+    <ion-card>
+      <ion-card-header>
+        <div class="header-text">
+          VERIFICACIÓN
+          <div class="hr">
+          </div>
+
+        </div>
+
+      </ion-card-header>
+      <hr>
+      <ion-card-content class="Inputs">
+        <ion-row>
+          <ion-col>
+            <ion-input id="flag">
+              <ion-img style="margin-left: 5px;" src="../assets/img/flag.png"></ion-img>
+            </ion-input>
+            <ion-input id="inputCode" value="+54" disabled maxlength="3"></ion-input>
+            <ion-input id="tel" [(ngModel)]="celular" type="tel" lines="true" maxlength="11"></ion-input>
+          </ion-col>
+        </ion-row>
+        
+        <button id="btn-siguiente" (click)="phoneAuth()">Siguiente</button>
+      </ion-card-content>
+    </ion-card>
+    <ng-container>
+      <div id="recaptcha-container"></div>
+    </ng-container>
+
+  </div>
+
+
+
+  <div class="contenedor2" *ngIf="valida">
+    <h1>Verificacion del teléfono</h1>
+    <h5>ingrese su codigo aqui</h5>
+    <ion-content>
+      <ion-row class="justify-content-center">
+        <ion-col>
+          <ion-input class="code" [(ngModel)]="code1" type="password tel" maxlength="1"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-input class="code" [(ngModel)]="code2" type="password tel" maxlength="1"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-input class="code" [(ngModel)]="code3" type="password tel" maxlength="1"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-input class="code" [(ngModel)]="code4" type="password tel" maxlength="1"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-input class="code" [(ngModel)]="code5" type="password tel" maxlength="1"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-input class="code" [(ngModel)]="code6" type="password tel" maxlength="1"></ion-input>
+        </ion-col>
+      </ion-row>
+
+
+      <button id="btn-verifica" (click)="singInWhitCode()">Verificar</button>
+    </ion-content>
+
+  </div>
+
+</div>
